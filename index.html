@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenSiteBlocker - Website Blocker Code Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="theme-toggle" id="themeToggle">
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </div>
+
+    <div class="container">
+        <header class="glass-card">
+            <h1>🚫 OpenSiteBlocker</h1>
+            <p class="subtitle">Generiere personalisierten Code zum Blockieren von Website-Funktionen</p>
+        </header>
+
+        <div class="content-grid">
+            <div class="options-section glass-card">
+                <h2>⚙️ Optionen wählen</h2>
+                <p class="section-description">Wähle die Funktionen, die du blockieren möchtest:</p>
+                
+                <div class="toggle-list">
+                    <div class="toggle-item">
+                        <div class="toggle-info">
+                            <label for="blockTextSelection">
+                                <span class="toggle-icon">📝</span>
+                                <span class="toggle-label">Text-Auswahl blockieren</span>
+                            </label>
+                            <p class="toggle-description">Verhindert, dass Benutzer Text markieren können</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="blockTextSelection" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="toggle-item">
+                        <div class="toggle-info">
+                            <label for="blockZoom">
+                                <span class="toggle-icon">🔍</span>
+                                <span class="toggle-label">Seiten-Zoom blockieren</span>
+                            </label>
+                            <p class="toggle-description">Deaktiviert das Zoomen der Seite</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="blockZoom" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="toggle-item">
+                        <div class="toggle-info">
+                            <label for="blockScroll">
+                                <span class="toggle-icon">📜</span>
+                                <span class="toggle-label">Scrollen blockieren</span>
+                            </label>
+                            <p class="toggle-description">Verhindert das Scrollen auf der Seite</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="blockScroll">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="toggle-item">
+                        <div class="toggle-info">
+                            <label for="blockRightClick">
+                                <span class="toggle-icon">🖱️</span>
+                                <span class="toggle-label">Rechtsklick blockieren</span>
+                            </label>
+                            <p class="toggle-description">Deaktiviert das Kontextmenü</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="blockRightClick" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="toggle-item">
+                        <div class="toggle-info">
+                            <label for="blockCopy">
+                                <span class="toggle-icon">📋</span>
+                                <span class="toggle-label">Kopieren blockieren</span>
+                            </label>
+                            <p class="toggle-description">Verhindert das Kopieren von Inhalten</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="blockCopy" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="toggle-item">
+                        <div class="toggle-info">
+                            <label for="blockCut">
+                                <span class="toggle-icon">✂️</span>
+                                <span class="toggle-label">Ausschneiden blockieren</span>
+                            </label>
+                            <p class="toggle-description">Verhindert das Ausschneiden von Inhalten</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="blockCut" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="toggle-item">
+                        <div class="toggle-info">
+                            <label for="blockPaste">
+                                <span class="toggle-icon">📌</span>
+                                <span class="toggle-label">Einfügen blockieren</span>
+                            </label>
+                            <p class="toggle-description">Verhindert das Einfügen von Inhalten</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="blockPaste">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="toggle-item">
+                        <div class="toggle-info">
+                            <label for="blockDrag">
+                                <span class="toggle-icon">👆</span>
+                                <span class="toggle-label">Drag & Drop blockieren</span>
+                            </label>
+                            <p class="toggle-description">Deaktiviert Drag & Drop-Funktionalität</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="blockDrag" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="toggle-item">
+                        <div class="toggle-info">
+                            <label for="blockPrint">
+                                <span class="toggle-icon">🖨️</span>
+                                <span class="toggle-label">Drucken blockieren</span>
+                            </label>
+                            <p class="toggle-description">Verhindert das Drucken der Seite</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="blockPrint">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="toggle-item">
+                        <div class="toggle-info">
+                            <label for="blockDevTools">
+                                <span class="toggle-icon">🔧</span>
+                                <span class="toggle-label">DevTools blockieren</span>
+                            </label>
+                            <p class="toggle-description">Versucht Entwicklertools zu blockieren (F12, Strg+Shift+I)</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="blockDevTools">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="code-section glass-card">
+                <h2>📄 Generierter Code</h2>
+                <p class="section-description">Kopiere diesen Code und füge ihn in deine HTML-Datei ein:</p>
+                
+                <div class="code-container">
+                    <pre><code id="generatedCode"></code></pre>
+                </div>
+
+                <button class="copy-button" id="copyButton">
+                    <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Code kopieren</span>
+                </button>
+
+                <div class="success-message" id="successMessage">
+                    ✅ Code erfolgreich kopiert!
+                </div>
+            </div>
+        </div>
+
+        <footer class="glass-card footer">
+            <p>💡 <strong>Hinweis:</strong> Füge den generierten Code in den <code>&lt;head&gt;</code>-Bereich deiner HTML-Datei ein.</p>
+            <p class="footer-info">OpenSiteBlocker - Open Source Website Function Blocker</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
