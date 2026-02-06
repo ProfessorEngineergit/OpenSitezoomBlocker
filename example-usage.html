@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Example - Blocked Website</title>
+    
+    <!-- START: Generated Code from OpenSiteBlocker -->
+    <style>
+        /* Block Text Selection */
+        * {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+
+    <script>
+        (function() {
+            "use strict";
+
+            // Block Right Click
+            document.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+                return false;
+            });
+
+            // Block Copy
+            document.addEventListener('copy', function(e) {
+                e.preventDefault();
+                return false;
+            });
+
+            // Block Cut
+            document.addEventListener('cut', function(e) {
+                e.preventDefault();
+                return false;
+            });
+
+            // Block Drag & Drop
+            document.addEventListener('dragstart', function(e) {
+                e.preventDefault();
+                return false;
+            });
+
+            // Block Zoom
+            document.addEventListener('wheel', function(e) {
+                if (e.ctrlKey) {
+                    e.preventDefault();
+                    return false;
+                }
+            }, { passive: false });
+            
+            document.addEventListener('keydown', function(e) {
+                // Block Ctrl/Cmd + Plus/Minus/0
+                if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '-' || e.key === '0')) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+        })();
+    </script>
+    <!-- END: Generated Code from OpenSiteBlocker -->
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #667eea;
+        }
+        .notice {
+            background: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚫 Example: Protected Website</h1>
+    
+    <div class="notice">
+        <strong>Notice:</strong> This page demonstrates the blocking features. Try to:
+        <ul>
+            <li>Select text (blocked ❌)</li>
+            <li>Right-click (blocked ❌)</li>
+            <li>Copy text with Ctrl+C (blocked ❌)</li>
+            <li>Zoom with Ctrl+Plus/Minus (blocked ❌)</li>
+            <li>Drag and drop content (blocked ❌)</li>
+        </ul>
+    </div>
+
+    <h2>About This Example</h2>
+    <p>
+        This is an example page showing how the generated code from OpenSiteBlocker works in practice.
+        The blocking code is inserted in the <code>&lt;head&gt;</code> section and automatically
+        protects your content from common interactions.
+    </p>
+
+    <h2>How to Use</h2>
+    <ol>
+        <li>Open <strong>index.html</strong> in your browser</li>
+        <li>Select the features you want to block using the toggles</li>
+        <li>Click "Code kopieren" to copy the generated code</li>
+        <li>Paste the code into your website's <code>&lt;head&gt;</code> section</li>
+        <li>Your website is now protected!</li>
+    </ol>
+
+    <h2>Disclaimer</h2>
+    <p>
+        These blocking features should be used responsibly. Blocking too many features can harm
+        the user experience and accessibility of your website. Always consider your users' needs
+        and accessibility requirements before implementing these protections.
+    </p>
+</body>
+</html>
